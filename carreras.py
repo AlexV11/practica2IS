@@ -115,7 +115,7 @@ def eliminar_carrera(url, datos):
         st.error("Ocurrió un error al eliminar la carrera")
 
 def cambiar_carrera(url, datos):
-    respuesta = requests.put(url, json=datos)
+    respuesta = requests.patch(url, json=datos)
     
     # Verificar el código de estado de la respuesta
     if respuesta.status_code == 200:
